@@ -58,25 +58,18 @@ const swiper2 = new Swiper('.spaces__swiper', {
 
 const swiper3 = new Swiper('.gallery__swiper', {
     loop: false,
+    freeMode: true,
 
     breakpoints: {
-        375: {
+        350: {
             slidesPerView: 1,
         },
-        768: {
+        550: {
             slidesPerView: 2,
         },
-        1000: {
-            slidesPerView: 4,
+        900: {
+            slidesPerView: 3,
         },
-        1110: {
-            slidesPerView: 5.5,
-        },
-    },
-
-    zoom: {
-        maxRatio: 4,
-        minRatio: 1,
     },
 
     navigation: {
@@ -84,15 +77,15 @@ const swiper3 = new Swiper('.gallery__swiper', {
         prevEl: '.gallery__swiper-button-prev',
     },
 
+    slidesPerView: 3,
+
     grabCursor: true,
 
     initialSlide: 1,
 
-    slidesPerGroup: 1,
-
     spaceBetween: 30,
 
-    centeredSlides: true,
+    centeredSlides: false,
 });
 
 const swiper4 = new Swiper('.reviews__swiper', {
@@ -453,3 +446,13 @@ contact.forEach(function (item) {
         });
     });
 });
+
+// -------------------------GO TO HELL, SLIDER-SWIPER, I'M GOD HERE-----------------------------
+
+let galleryActiveSlide = document.querySelector('.swiper-slide-active');
+
+// galleryActiveSlide = '<div class="swiper-slide-active-wrapper">' + galleryActiveSlide + '</div>';
+console.log(galleryActiveSlide);
+
+let innerGalleryActiveSlide = galleryActiveSlide.innerHTML;
+console.log(innerGalleryActiveSlide);
